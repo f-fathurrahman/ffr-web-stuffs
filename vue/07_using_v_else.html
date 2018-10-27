@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Example of using v-else</title>
+</head>
+
+<body>
+
+<div id="app">
+
+  <h1 v-if="!message">You must enter a text for a button to show up</h1>
+
+  <h2 v-else>You want to send message</h2>
+  
+  <textarea v-model="message"></textarea>
+  <br>
+    
+  <button v-show="message">
+    Send message. This button will show if there is message
+  </button>
+      
+  <pre>
+    {{ $data | json }}
+  </pre>
+</div>
+      
+</body>
+
+<script src="../js_common/vue.js"></script>
+      
+<script>
+new Vue({
+  el: "#app",
+  data: {
+    message: "This is a message"
+  }
+})
+</script>
+
+
+</html>

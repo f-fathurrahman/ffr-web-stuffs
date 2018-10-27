@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Hello Vue</title>
+  <link href="../css_common/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<div id="app">
+<div class="container">
+
+  <div v-if="gender=='male' || gender =='female'">
+    <h1>Hello
+      <span v-show="gender=='male'">Mr. {{my_name}}!</span>
+      <span v-show="gender=='female'">Mrs. {{my_name}}!</span>
+    </h1>
+  </div>
+
+  <h1 v-else>So you can't decide. Fine!</h1>
+
+  <label for="in_gender">Enter your gender:</label>
+  <input v-model="gender" class="form-control" id="in_gender">
+  
+  <label for="in_name">Enter your name:</label>
+  <input v-model="my_name" class="form-control" id="in_name">
+
+</div><!-- class=container -->
+
+<br>
+
+<pre>{{ $data | json }}</pre>
+
+</div><!-- id=app -->
+
+</body>
+
+<script src="../js_common/vue.js"></script>
+
+<script>
+new Vue({
+  el: "#app",
+  data: {
+    my_name : "Bond",
+    gender : "male",
+  },
+})
+</script>
+
+
+</html>
