@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Simple Plot</title>
+  <script src="../js_common/plotly-latest.min.js"></script>
+  <style>
+    #my_plot {
+      width: 800px;
+      height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="my_plot"></div>
+
+</body>
+
+<script>
+my_plot = document.getElementById("my_plot");
+
+Plotly.plot( my_plot, [{
+  x: [1,2,3,4,5],
+  y: [1,4,5,-1,5],
+}],
+  { margin: {t: 0} }
+);
+</script>
+
+</html>
