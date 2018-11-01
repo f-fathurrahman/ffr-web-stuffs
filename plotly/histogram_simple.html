@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Test Plotly.js</title>
+  <script src="../js_common/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+<div id="simpleplot"></div>
+
+</body>
+
+<script>
+//simpleplot = document.getElementById("simpleplot");
+var x = [];
+for (var i = 0; i < 500; i ++) {
+	x[i] = Math.random();
+}
+
+var trace = {
+    x: x,
+    type: 'histogram',
+  };
+var data = [trace];
+
+Plotly.newPlot("simpleplot", data);
+
+</script>
+
+</html>

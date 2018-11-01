@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Test Plotly.js</title>
+  <script src="../js_common/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+<div id="simpleplot"></div>
+
+</body>
+
+<script>
+Plotly.d3.csv("./data/mt_bruno_elevation.csv", function(err, rows){
+function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
+  
+var z_data=[]
+for(i=0;i<24;i++)
+{
+  z_data.push(unpack(rows,i));
+}
+
+var data = [{
+           z: z_data,
+           type: 'surface'
+        }];
+  
+var layout = {
+  title: 'Mt Bruno Elevation',
+  autosize: false,
+  width: 1000,
+  height: 1000,
+  margin: {
+    l: 65,
+    r: 50,
+    b: 65,
+    t: 90,
+  }
+};
+Plotly.newPlot('simpleplot', data, layout);
+});
+</script>
+
+</html>
+
