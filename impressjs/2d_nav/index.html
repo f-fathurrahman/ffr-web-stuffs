@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+    <meta charset="utf-8" />
+    <title>Desserts (2D navigation demo)</title>
+    <meta name="description" content="Learning impress.js: 2D navigation" />
+    <meta name="author" content="Fadjar Fathurrahman" />
+    <link href="css/presentation.css" rel="stylesheet" />
+</head>
+
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b>
+    by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>,
+    <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!-- Some images that are fixed to background in the css -->
+<img id="apple-image" class="bg" src="images/apples.jpg">
+<img id="banana-image" class="bg" src="images/bananas.jpg">
+<img id="pineapple-image" class="bg" src="images/pineapples">
+
+
+<div id="impress" data-transition-duration="1000">
+
+    <div class="step" data-scale="2" data-x="0" data-y="0">
+        <h1>Overview slide</h1>
+    </div>
+
+    <div id="Slides1" class="step" data-rel-x="1500" data-rel-y="1500" data-scale="1">
+        <h1>Slides 1</h1>
+
+        <p>
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+        </p>
+
+        <p>
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+        </p>
+
+        <p>
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+        </p>
+
+        <p>
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+            Blah blah blah blah blah blah blah blah blah blah blah blah blah
+        </p>
+
+    </div>
+
+    <div id="Slides2" class="step" data-rel-x="2000" data-rel-y="0" data-scale="1">
+        <h1>Slides 2</h1>
+
+        <p style="position: absolute;
+                  top: 50%; left: 10%;
+                  border: 4px;
+                  border-color: rgba(0,0,0,1.0);
+                  background-color: white;">
+            This a text relatively positioned
+        </p>
+
+        <p>Another paragraph.</p>
+        <p>Another paragraph.</p>
+        <p>Another paragraph.</p>
+        <p>Another paragraph.</p>
+        <p>Another paragraph.</p>
+        <p>Another paragraph.</p>
+
+    </div>
+
+    <div id="Slides3" class="step" data-rel-x="2000" data-rel-y="0" data-scale="1">
+        <h1>Slides 3</h1>
+    </div>
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="9" style="pointer-events: none;">
+    </div>
+</div>
+
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="../../js_common/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
