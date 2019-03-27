@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Chapter 10, Example 3</title>
+</head>
+
+<body>
+  <img id="img0" src="Animated-Flag-Indonesia.gif" />
+  <img id="img1" src="Animated-Flag-Singapore.gif" />
+
+  <script>
+    var myImages = [
+      "Animated-Flag-Indonesia.gif",
+      "Animated-Flag-Malaysia.gif",
+      "Animated-Flag-Singapore.gif",
+      "Animated-Flag-Mexico.gif",
+      "Animated-Flag-Thailand.gif"
+    ];
+
+    function changeImg(e) {
+      var el = e.target;
+      var newImgNumber = Math.round(Math.random()*4);
+
+      while (el.src.indexOf(myImages[newImgNumber]) != -1) {
+        newImgNumber = Math.round(Math.random()*4);
+      }
+
+      el.src = myImages[newImgNumber];
+    }
+
+    document.getElementById("img0").addEventListener("click", changeImg);
+    document.getElementById("img1").addEventListener("click", changeImg);
+  </script>
+</body>
+
+</html>

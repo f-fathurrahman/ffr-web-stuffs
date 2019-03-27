@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Chapter 10: Example 1</title>
+</head>
+
+<body>
+  <img src="Animated-Flag-Indonesia.gif" onclick="changeImg(this)" />
+  <img src="Animated-Flag-Malaysia.gif" onclick="changeImg(this)" />
+
+  <script>
+    var myImages = [
+      "Animated-Flag-Indonesia.gif",
+      "Animated-Flag-Malaysia.gif",
+      "Animated-Flag-Singapore.gif",
+      "Animated-Flag-Mexico.gif",
+      "Animated-Flag-Thailand.gif"
+    ];
+
+    function changeImg(that) {
+      var newImgNumber = Math.round(Math.random()*4);
+      while( that.src.indexOf(myImages[newImgNumber]) != -1 ) {
+        newImgNumber = Math.round(Math.random()*4);
+      }
+      that.src = myImages[newImgNumber];
+    }
+  </script>
+</body>
+
+</html>
