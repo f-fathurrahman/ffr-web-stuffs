@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="../common/d3.js"></script>
+  <title>Simple D3</title>
+</head>
+
+<body>
+
+<h3>Hello from ffr</h3>
+
+<p>
+This is another paragraph.
+</p>
+
+<p>
+Yet another paragraph.
+</p>
+
+<script>
+
+// Set the style for h3
+d3.select("h3").style("color", "darkblue");
+d3.select("h3").style("font-size", "24px");
+
+var body = d3.select("body");
+var p = body.append("p");
+p.text("This new paragraph is added by d3.js.").style("font-size", "26pt");
+p.style("font-family", "Monaco");
+
+body.append("p").text("This is yet another paragraph added by d3.js")
+.style("font-size", "35pt");
+
+</script>
+
+</body>
+
+</html>
