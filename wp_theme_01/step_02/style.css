@@ -1,0 +1,19 @@
+.push { 
+    clear: both;
+}
+
+li {
+    padding: 10px 0 10px 15px;
+    margin: 0 0 0 -20px;
+}
+
+li:last-child {
+    padding-bottom: 5px;
+}
+
+.grid4up li {
+    width: 13%;
+    float: left;
+    padding: 0;
+    margin-left: 10%;
+}
