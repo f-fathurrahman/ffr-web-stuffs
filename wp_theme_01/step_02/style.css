@@ -1,3 +1,17 @@
+body {
+    font-family: sans-serif;
+}
+
+h1, h3, h5 {
+    font-family: Helvetica;
+}
+
+
+h2, h4, h6 {
+    font-family: sans-serif;
+}
+
+
 .push { 
     clear: both;
 }
