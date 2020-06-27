@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    
+<title>WebGL Testing</title>
+    
+<meta charset="utf-8">
+
+<style type="text/css">
+canvas {
+    border: 8px dotted blue;
+}
+</style>
+
+<script type="text/javascript">
+var gl = null;
+
+function getGLContext() {
+    
+    var canvas = document.getElementById("main-canvas");
+    
+    if( canvas == null ) {
+        alert("There is no canvas on this page");
+        return;
+    }
+
+    var names = ["webgl", "experimental-webgl", "webkit-3d", "moz-webgl"];
+
+    for( var i = 0; i < names.length; i++ ) {
+        try {
+            gl = canvas.getContext(names[i]);
+        }
+        catch(e) {}
+        if(gl) break;
+    }
+
+    if( gl == null ) {
+        alert("WebGL is not available");
+    }
+    else {
+        alert("OK you got a WebGL context");
+    }
+}
+</script>
+
+
+</head>
+
+<body onLoad="getGLContext()">
+
+<canvas id="main-canvas" width="800" height="600">
+    Your browser does not support HTML5
+</canvas>
+
+</body>
+
+</html>
