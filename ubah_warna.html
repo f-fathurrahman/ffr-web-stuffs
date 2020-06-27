@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Connecting Events Using HTML Attributes</title>
+</head>
+
+<body>
+
+<input type="submit" value="Jadi merah" onclick="jadiMerah()">
+
+<input type="submit" value="Jadi biru" onclick="jadiBiru()">
+
+<input type="submit" value="Jadi putih" onclick="jadiPutih()">
+
+<script>
+function jadiMerah()
+{
+  alert("Akan jadi merah");
+  document.bgColor = "red";
+}
+
+function jadiBiru()
+{
+  alert("Akan jadi biru");
+  document.bgColor = "blue";
+}
+
+function jadiPutih()
+{
+  alert("Akan jadi putih");
+  document.bgColor = "white";
+}
+</script>
+
+</body>
+
+</html>
